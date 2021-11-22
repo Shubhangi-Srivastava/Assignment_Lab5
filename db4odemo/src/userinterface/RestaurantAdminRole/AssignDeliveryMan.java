@@ -84,9 +84,11 @@ public class AssignDeliveryMan extends javax.swing.JPanel {
         AssignOrderBtn = new javax.swing.JButton();
         BackBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        DeliveryManJTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         DeliveryManJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
@@ -117,24 +119,27 @@ public class AssignDeliveryMan extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 404, 91));
 
-        AssignOrderBtn.setText("Assign Order");
+        AssignOrderBtn.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        AssignOrderBtn.setText("Assign Delivery man");
         AssignOrderBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AssignOrderBtnActionPerformed(evt);
             }
         });
-        add(AssignOrderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, -1, -1));
+        add(AssignOrderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 250, 210, 40));
 
-        BackBtn.setText("<< Back");
+        BackBtn.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        BackBtn.setText("Previous");
         BackBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BackBtnActionPerformed(evt);
             }
         });
-        add(BackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
-
-        jLabel1.setText("jLabel1");
+        add(BackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 120, 40));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/shubhangisrivastava/Downloads/foodRestaurant.jpeg")); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 450));
     }// </editor-fold>//GEN-END:initComponents
 
     private void AssignOrderBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignOrderBtnActionPerformed
@@ -175,6 +180,7 @@ public class AssignDeliveryMan extends javax.swing.JPanel {
     private javax.swing.JButton BackBtn;
     private javax.swing.JTable DeliveryManJTable;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

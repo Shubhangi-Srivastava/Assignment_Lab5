@@ -36,7 +36,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         this.account=account;
         this.userProcessContainer = userProcessContainer;
         this.system=system;
-        valueLabel.setText("Welcome"+account.getName());
+        valueLabel.setText("Welcome "+account.getName());
         populateTable();
         pastTblPopulate();
         
@@ -81,9 +81,11 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         valueLabel = new javax.swing.JLabel();
         valueLabel1 = new javax.swing.JLabel();
         valueLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         pastTbl = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(255, 204, 51));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         restaurentTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -119,23 +121,25 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
             restaurentTable.getColumnModel().getColumn(2).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 346, 97));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 460, 97));
 
         requestTestJButton.setText("Place Order from this Restaurant");
+        requestTestJButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         requestTestJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 requestTestJButtonActionPerformed(evt);
             }
         });
-        add(requestTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 130, -1, -1));
+        add(requestTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, -1, 30));
 
         refreshTestJButton.setText("Refresh");
+        refreshTestJButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         refreshTestJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refreshTestJButtonActionPerformed(evt);
             }
         });
-        add(refreshTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 460, -1, -1));
+        add(refreshTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 460, 120, 30));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Customer:");
@@ -143,15 +147,21 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
 
         valueLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         valueLabel.setText("<value>");
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 250, 26));
+        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 340, 26));
 
+        valueLabel1.setBackground(new java.awt.Color(255, 204, 0));
         valueLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        valueLabel1.setText("Available Restaurants");
-        add(valueLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 210, 26));
+        valueLabel1.setText("       Restaurants");
+        valueLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(valueLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 210, 26));
 
         valueLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        valueLabel2.setText("Order History");
-        add(valueLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 158, 26));
+        valueLabel2.setText("  Order History");
+        valueLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(valueLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 150, 26));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/shubhangisrivastava/Downloads/friesfood.jpeg")); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, -20, 840, 280));
 
         pastTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -210,6 +220,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel enterpriseLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable pastTbl;

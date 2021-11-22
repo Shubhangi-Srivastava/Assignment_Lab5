@@ -95,18 +95,21 @@ public class MenuPanel extends javax.swing.JPanel {
         RemoveBtn = new javax.swing.JButton();
         addressTxt = new javax.swing.JTextField();
         enterpriseLabel1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        cardBtn.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         cardBtn.setText("Add to Cart");
         cardBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cardBtnActionPerformed(evt);
             }
         });
-        add(cardBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, -1, -1));
+        add(cardBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 150, -1));
 
-        backJButton.setText("<<Back");
+        backJButton.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        backJButton.setText("Previous");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
@@ -116,12 +119,13 @@ public class MenuPanel extends javax.swing.JPanel {
 
         valueLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         valueLabel.setText("<value>");
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, 210, -1));
+        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, 210, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Address:");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 480, 120, 30));
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 120, 30));
 
+        cartTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cartTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -152,6 +156,7 @@ public class MenuPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, -1, 100));
 
+        menuTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         menuTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -160,7 +165,7 @@ public class MenuPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Dish Name", "Description", "Amount"
+                "Order name", "Description", "Amount"
             }
         ) {
             Class[] types = new Class [] {
@@ -182,6 +187,7 @@ public class MenuPanel extends javax.swing.JPanel {
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, -1, 100));
 
+        orderBtn1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         orderBtn1.setText("Order");
         orderBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,18 +196,24 @@ public class MenuPanel extends javax.swing.JPanel {
         });
         add(orderBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 540, -1, -1));
 
+        RemoveBtn.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         RemoveBtn.setText("Remove From Cart");
         RemoveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RemoveBtnActionPerformed(evt);
             }
         });
-        add(RemoveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, -1, -1));
+        add(RemoveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 430, -1, -1));
         add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 490, 170, -1));
 
+        enterpriseLabel1.setBackground(new java.awt.Color(255, 255, 255));
         enterpriseLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel1.setText("Order Here:");
-        add(enterpriseLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 120, 30));
+        add(enterpriseLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 120, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/shubhangisrivastava/Downloads/foodRestaurant.jpeg")); // NOI18N
+        jLabel1.setText("jLabel1");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 640));
     }// </editor-fold>//GEN-END:initComponents
 
     private void cardBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cardBtnActionPerformed
@@ -316,6 +328,7 @@ public class MenuPanel extends javax.swing.JPanel {
     private javax.swing.JTable cartTable;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JLabel enterpriseLabel1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable menuTable;
